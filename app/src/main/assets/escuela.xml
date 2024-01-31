@@ -1,0 +1,45 @@
+<escuela>
+    <alumno id="1">
+        <nombre>Carlos</nombre>
+        <edad>22</edad>
+        <matriculado>true</matriculado>
+        <materias>
+            <materia nombre="Filosofia" calificacion="85" />
+            <materia nombre="Matematicas" calificacion="75" />
+            <materia nombre="Historia" calificacion="90" />
+        </materias>
+    </alumno>
+
+    <alumno id="2">
+        <nombre>Ana</nombre>
+        <edad>20</edad>
+        <matriculado>true</matriculado>
+        <materias>
+            <materia nombre="Filosofia" calificacion="78" />
+            <materia nombre="Matematicas" calificacion="85" />
+            <materia nombre="Ciencias" calificacion="92" />
+        </materias>
+    </alumno>
+
+    <alumno id="3">
+        <nombre>David</nombre>
+        <edad>21</edad>
+        <matriculado>false</matriculado>
+        <materias>
+            <materia nombre="Historia" calificacion="88" />
+            <materia nombre="Ciencias" calificacion="75" />
+            <materia nombre="Arte" calificacion="80" />
+        </materias>
+    </alumno>
+
+    <alumno id="4">
+        <nombre>Laura</nombre>
+        <edad>23</edad>
+        <matriculado>true</matriculado>
+        <materias>
+            <materia nombre="Filosofia" calificacion="92" />
+            <materia nombre="Arte" calificacion="85" />
+            <materia nombre="Matematicas" calificacion="88" />
+        </materias>
+    </alumno>
+</escuela>

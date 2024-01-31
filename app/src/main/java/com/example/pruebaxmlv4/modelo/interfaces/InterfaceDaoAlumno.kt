@@ -12,5 +12,5 @@ interface InterfaceDaoAlumno {
 
     fun procesarFicheroXmlInterno(): MutableList<Alumno>
 
-    fun copiarArchivo()
+    fun copiarArchivoDesdeAsset()
 }

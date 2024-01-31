@@ -11,6 +11,10 @@ data class Escuela constructor(
 
 @Root(name = "alumno")
 data class Alumno constructor(
+
+    @field:Attribute(name = "id")
+    var id : Int = 0,
+
     @field:Element(name = "nombre")
     var nombre: String = "",
 

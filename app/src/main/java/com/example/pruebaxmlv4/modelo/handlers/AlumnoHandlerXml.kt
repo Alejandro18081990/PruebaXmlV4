@@ -36,6 +36,7 @@ class AlumnoHandlerXml : DefaultHandler() {
             materia!!.calificacion = attributes.getValue("calificacion").toInt()
         } else if (nombre == "alumno") {
             alumno = Alumno()
+            alumno!!.id = attributes.getValue("id").toInt()
             alumno!!.materias.materias = mutableListOf()
         }
         println("startElement: $nombre")

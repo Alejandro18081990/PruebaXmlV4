@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         modelViewAlumno = ViewModelProvider(this)[ViewModelAlumno::class.java]
 
+
         var materiasInformatica = mutableListOf(
             Materia("Programación", 8),
             Materia("Base de datos", 6),
@@ -36,28 +37,25 @@ class MainActivity : AppCompatActivity() {
 
 
         var alumnos = arrayOf(
-            Alumno("Alejandro", 33, true, materiasCiclo),
-            Alumno("Leo", 15, true, materiasCiclo),
-            Alumno("Noah", 11, false, materiaColegio),
+            Alumno(12,"Alejandro", 33, true, materiasCiclo),
+            Alumno(13,"Leo", 15, true, materiasCiclo),
+            Alumno(14,"Noah", 11, false, materiaColegio),
         )
 
-
         //Poblamos el fichero interno con información del fichero de Assets
-        //modelViewAlumno.copiarArchivo()
+        modelViewAlumno.copiarArchivo()
 
-        //Escritura fichero
-        for (alumno in alumnos)
-            modelViewAlumno.addAlumno(alumno)
 
-        //Lectura fichero interno
-        listado = modelViewAlumno.procesarFicheroXmlInterno()
+        //Lectura fichero
+        listado = modelViewAlumno.procesarFicheroXml()
         for (alumno in listado)
-            Log.d("VerAlumnosFicheroInterno", alumno.toString())
+            Log.d("VerAlumnosFicheroSimple", alumno.toString())
 
         Log.d(
             "VerAlumnosSeparador",
             "---------------------------------------------------------------"
         )
+
         //Lectura fichero mediante SAX
         listado = modelViewAlumno.procesarArchivoXMLSAX()
         for (alumno in listado)
@@ -68,10 +66,13 @@ class MainActivity : AppCompatActivity() {
             "---------------------------------------------------------------"
         )
 
-        //Lectura fichero
-        listado = modelViewAlumno.procesarFicheroXml()
-        for (alumno in listado)
-            Log.d("VerAlumnosFicheroSimple", alumno.toString())
+        //Escritura fichero
+        for (alumno in alumnos)
+            modelViewAlumno.addAlumno(alumno)
 
+        //Lectura fichero interno
+        listado = modelViewAlumno.procesarFicheroXmlInterno()
+        for (alumno in listado)
+            Log.d("VerAlumnosFicheroInterno", alumno.toString())
     }
 }
